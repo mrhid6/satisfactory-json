@@ -16,10 +16,11 @@ export function transformExtra(builder: Builder): void {
     '/Game/FactoryGame/-Shared/Blueprint/BP_GameState.BP_GameState_C': (
       builder
     ) => builder.call(RegisteredFunction.transformGameState),
-
     '/Game/FactoryGame/Character/Player/BP_PlayerState.BP_PlayerState_C': (
       builder
     ) => builder.call(RegisteredFunction.transformPlayerState),
+    '/Game/FactoryGame/Buildable/Factory/DroneStation/BP_DroneTransport.BP_DroneTransport_C':
+      (builder) => builder.call(RegisteredFunction.transformDroneTransport),
     '/Game/FactoryGame/Buildable/Vehicle/Tractor/BP_Tractor.BP_Tractor_C': (
       builder
     ) => builder.call(RegisteredFunction.transformVehicle),

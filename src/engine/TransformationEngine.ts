@@ -14,6 +14,7 @@ import { transformCircuitSubsystem } from '../transforms/extras/CircuitSubsystem
 import { transformGameMode } from '../transforms/extras/GameMode';
 import { transformGameState } from '../transforms/extras/GameState';
 import { transformPlayerState } from '../transforms/extras/PlayerState';
+import { transformDroneTransport } from '../transforms/extras/DroneTransport';
 import { transformVehicle } from '../transforms/extras/Vehicle';
 import { transformConveyorBelt } from '../transforms/extras/ConveyorBelt';
 import { transformTrain } from '../transforms/extras/Train';
@@ -69,6 +70,7 @@ export enum RegisteredFunction {
   transformGameMode = 'transformGameMode',
   transformGameState = 'transformGameState',
   transformPlayerState = 'transformPlayerState',
+  transformDroneTransport = 'transformDroneTransport',
   transformVehicle = 'transformVehicle',
   transformConveyorBelt = 'transformConveyorBelt',
   transformTrain = 'transformTrain',
@@ -144,6 +146,10 @@ export class TransformationEngine {
     registerFunction(
       RegisteredFunction.transformPlayerState,
       transformPlayerState
+    );
+    registerFunction(
+      RegisteredFunction.transformDroneTransport,
+      transformDroneTransport
     );
     registerFunction(RegisteredFunction.transformVehicle, transformVehicle);
     registerFunction(
